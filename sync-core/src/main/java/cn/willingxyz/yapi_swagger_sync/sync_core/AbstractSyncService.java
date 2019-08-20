@@ -41,12 +41,12 @@ public abstract class AbstractSyncService implements ISyncService{
         }
     }
 
-    protected String getCatIdByCatName(String catName)
+    protected Integer getCatIdByCatName(String catName)
     {
         var res = _client.getCats(_projectId);
         return res.getData().stream()
                 .filter(o -> o.getName().equals(catName))
-                .map(o -> o.getName())
+                .map(o -> o.get_id())
                 .findFirst().orElse(null);
     }
 

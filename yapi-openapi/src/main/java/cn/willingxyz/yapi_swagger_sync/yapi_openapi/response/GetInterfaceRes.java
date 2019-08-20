@@ -96,9 +96,9 @@ public class GetInterfaceRes {
     private String _username;
     private List<Tag> _tag;
     private List<ReqParam> _req_params;
-    private List<ReqQuery> _req_query;
-    private List<ReqHeader> _req_headers;
-    private List<ReqBodyForm> _req_body_form;
+    private List<ReqParam> _req_query;
+    private List<ReqParam> _req_headers;
+    private List<ReqParam> _req_body_form;
 
 
 }

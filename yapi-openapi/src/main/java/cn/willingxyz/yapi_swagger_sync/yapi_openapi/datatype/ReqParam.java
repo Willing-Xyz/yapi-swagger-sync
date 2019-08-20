@@ -5,6 +5,11 @@ import lombok.Data;
 @Data
 public class ReqParam {
     private String _name;
+    private String _type;
     private String _example;
     private String _desc;
+    /**
+     * 0 或者 1
+     */
+    private String _required;
 }
