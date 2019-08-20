@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>cn.willingxyz.parentpom</groupId>
+        <artifactId>parentpom-common</artifactId>
+        <version>1.0.0</version>
+    </parent>
+    <groupId>cn.willingxyz.yapi_swagger_sync</groupId>
+    <artifactId>yapi_swagger_sync</artifactId>
+    <packaging>pom</packaging>
+    <version>1.0-SNAPSHOT</version>
+    <modules>
+        <module>yapi-openapi</module>
+        <module>sync-core</module>
+        <module>swagger2</module>
+    </modules>
+
+    <properties>
+        <Version>1.0-SNAPSHOT</Version>
+    </properties>
+
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>io.github.openfeign</groupId>
+                <artifactId>feign-core</artifactId>
+                <version>10.2.3</version>
+            </dependency>
+            <!-- https://mvnrepository.com/artifact/io.github.openfeign/feign-jackson -->
+            <dependency>
+                <groupId>io.github.openfeign</groupId>
+                <artifactId>feign-jackson</artifactId>
+                <version>10.2.3</version>
+            </dependency>
+
+            <dependency>
+                <groupId>io.github.openfeign</groupId>
+                <artifactId>feign-slf4j</artifactId>
+                <version>10.2.3</version>
+            </dependency>
+            <dependency>
+                <groupId>org.slf4j</groupId>
+                <artifactId>slf4j-api</artifactId>
+                <version>1.7.26</version>
+            </dependency>
+            <dependency>
+                <groupId>ch.qos.logback</groupId>
+                <artifactId>logback-classic</artifactId>
+                <version>1.2.3</version>
+            </dependency>
+            <dependency>
+                <groupId>cn.willingxyz.yapi_swagger_sync</groupId>
+                <artifactId>yapi-openapi</artifactId>
+                <version>${Version}</version>
+            </dependency>
+            <!-- https://mvnrepository.com/artifact/io.swagger.parser.v3/swagger-parser -->
+            <dependency>
+                <groupId>io.swagger.parser.v3</groupId>
+                <artifactId>swagger-parser</artifactId>
+                <version>2.0.13</version>
+            </dependency>
+
+            <dependency>
+                <groupId>cn.willingxyz.yapi_swagger_sync</groupId>
+                <artifactId>sync-core</artifactId>
+                <version>${Version}</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+</project>
